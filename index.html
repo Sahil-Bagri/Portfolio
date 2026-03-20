@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+<div id="cursorWordsContainer"></div>
 <div class="hero">
     <div class="container">
         <div class="navbar">
@@ -449,7 +449,43 @@
         document.body.classList.add('dark-theme');
         if(themeToggle) themeToggle.innerHTML = '☀️ Light Mode';
     }
-    
+    const words = [
+    "data", "business", "ML", "excel",
+    "SQL", "tableau", "powerBI",
+    "ppt", "present", "analytics",
+    "AI", "insights", "dashboard"
+];
+
+const container = document.getElementById("cursorWordsContainer");
+
+document.addEventListener("mousemove", (e) => {
+    // Random chance to reduce spam (important)
+    if (Math.random() > 0.7) return;
+
+    const word = document.createElement("div");
+    word.className = "cursor-word";
+
+    // Random word
+    word.innerText = words[Math.floor(Math.random() * words.length)];
+
+    // Position near cursor (with slight randomness)
+    const offsetX = (Math.random() - 0.5) * 30;
+    const offsetY = (Math.random() - 0.5) * 30;
+
+    word.style.left = e.clientX + offsetX + "px";
+    word.style.top = e.clientY + offsetY + "px";
+
+    // Random color variation (cool effect)
+    const colors = ["#a855f7", "#60a5fa", "#34d399", "#f472b6"];
+    word.style.color = colors[Math.floor(Math.random() * colors.length)];
+
+    container.appendChild(word);
+
+    // Remove after animation
+    setTimeout(() => {
+        word.remove();
+    }, 1500);
+});
     // Initialize everything
     document.addEventListener("DOMContentLoaded", () => {
         fetchGitHubData();
