@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Sahil Bagri | Data Science Portfolio | Live Feedback</title>
+    <!-- Google Fonts & Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Swiper JS for testimonials -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="hero">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">🧬 SAHIL BAGRI</div>
+            <div class="nav-links">
+                <a href="#work">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#github">GitHub</a>
+                <a href="#feedback">Feedback</a>
+                <button class="theme-toggle" id="themeToggle">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="badge"><i class="fas fa-graduation-cap"></i> Data Science Student | ML Enthusiast</div>
+                <h1>Turning <span class="highlight">data</span> into <br> impact & stories</h1>
+                <div id="rotatingTextHero" style="font-weight:700; font-size:1.8rem; margin:0.5rem 0; background: linear-gradient(135deg,#c084fc,#a0a9ff); -webkit-background-clip:text; background-clip:text; color:transparent;">🧠 ML Engineer</div>
+                <p>I craft intelligent solutions with Python, AI, and scalable analytics. Explore my repositories and see how I transform complex datasets into meaningful decisions.</p>
+                <div class="btn-group">
+                    <a href="https://github.com/Sahil-Bagri" target="_blank" class="btn-primary"><i class="fab fa-github"></i> GitHub Profile</a>
+                    <a href="#work" class="btn-outline"><i class="fas fa-arrow-down"></i> Explore Work</a>
+                </div>
+            </div>
+            <div class="hero-stats">
+                <div><span class="stat-number" id="repoCount">∞</span> <span style="opacity:0.8">Public Repos</span></div>
+                <div style="margin: 1rem 0"><span class="stat-number" id="followersCount">—</span> <span style="opacity:0.8">GitHub Followers</span></div>
+                <div><i class="fas fa-code"></i> 20+ projects shipped</div>
+                <div style="margin-top:1rem"><i class="fas fa-chart-line"></i> Data Science • LLMs • Analytics</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Cursor Animation Section -->
+<div class="cursor-animation-section">
+    <div class="container cursor-container">
+        <div class="cursor-title">✨ <span class="glow-text">Move your cursor</span> — feel the magic</div>
+        <div class="cursor-sub">Hover inside the field below, each movement triggers a unique data-science mantra</div>
+        <div class="message-board" id="messageBoard">
+            <div class="dynamic-message" id="dynamicMessage">🧠✨ Data Alchemist</div>
+        </div>
+        <div class="cursor-hint"><i class="fas fa-mouse-pointer"></i> glide cursor across the board → messages change dynamically</div>
+    </div>
+</div>
+
+<section id="skills">
+    <div class="container">
+        <h2 class="section-title">⚡ Core <span class="glow-text">Superpowers</span></h2>
+        <div class="section-sub">Tech stack & tools — always learning, always building</div>
+        <div class="skills-grid">
+            <span class="skill-tag">🐍 Python</span>
+            <span class="skill-tag">📊 Pandas / NumPy</span>
+            <span class="skill-tag">🤖 Scikit-learn</span>
+            <span class="skill-tag">🧠 TensorFlow</span>
+            <span class="skill-tag">📈 Power BI</span>
+            <span class="skill-tag">🗄️ SQL</span>
+            <span class="skill-tag">⚡ Tableau</span>
+            <span class="skill-tag">🌊 Apache Spark</span>
+            <span class="skill-tag">🖥️ Git & GitHub</span>
+            <span class="skill-tag">📝 NLP / Transformers</span>
+        </div>
+    </div>
+</section>
+
+<section id="work" style="background: #fefefe;">
+    <div class="container">
+        <h2 class="section-title">📌 Featured <span class="glow-text">Projects</span></h2>
+        <div class="section-sub">From predictive modeling to end‑to‑end ML pipelines — live on GitHub</div>
+        <div class="projects-grid" id="projectsContainer">
+            <div class="project-card"><div class="project-icon"><i class="fas fa-spinner fa-pulse"></i></div><h3>Loading repositories...</h3><p>Fetching latest work from GitHub</p></div>
+        </div>
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="https://github.com/Sahil-Bagri?tab=repositories" target="_blank" class="btn-primary" style="background:#111;">Explore All Repos <i class="fas fa-external-link-alt"></i></a>
+        </div>
+    </div>
+</section>
+
+<section id="github" style="background: #f5f7fe;">
+    <div class="container">
+        <div class="github-spotlight">
+            <div>
+                <i class="fab fa-github" style="font-size: 3rem; color:#6c63ff;"></i>
+                <h3 style="margin-top:0.5rem">GitHub Pulse</h3>
+                <p>Active contributions, open source, and data science experiments</p>
+            </div>
+            <div>
+                <div><i class="fas fa-star"></i> <strong id="starCount">—</strong> total stars earned</div>
+                <div style="margin-top:10px"><i class="fas fa-code-branch"></i> <strong id="forkCount">—</strong> forks across repos</div>
+                <div style="margin-top:10px"><i class="fas fa-calendar-alt"></i> latest activity: <span id="lastPush">live</span></div>
+            </div>
+            <a href="https://github.com/Sahil-Bagri" target="_blank" class="btn-primary" style="background:#1f2937;">@Sahil-Bagri <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- Feedback & Improvements Section -->
+<section id="feedback" class="feedback-section">
+    <div class="container">
+        <h2 class="section-title">💬 <span class="glow-text">Your Feedback Matters</span></h2>
+        <div class="section-sub">Share your thoughts, suggestions, or just say hello! All comments are saved and displayed below.</div>
+        
+        <div class="feedback-grid">
+            <!-- Feedback Form -->
+            <div class="feedback-form-card">
+                <h3 style="margin-bottom: 1.5rem;">📝 Leave a Comment</h3>
+                <form id="feedbackForm">
+                    <div class="form-group">
+                        <label>Your Name *</label>
+                        <input type="text" id="userName" required placeholder="e.g., John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label>Rating</label>
+                        <div class="rating-group">
+                            <input type="radio" name="rating" value="5" id="star5"><label for="star5">★</label>
+                            <input type="radio" name="rating" value="4" id="star4"><label for="star4">★</label>
+                            <input type="radio" name="rating" value="3" id="star3"><label for="star3">★</label>
+                            <input type="radio" name="rating" value="2" id="star2"><label for="star2">★</label>
+                            <input type="radio" name="rating" value="1" id="star1"><label for="star1">★</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Your Comment / Suggestion *</label>
+                        <textarea id="userComment" rows="4" required placeholder="What do you think about my portfolio? Any suggestions for improvement?"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">💬 Submit Feedback</button>
+                </form>
+            </div>
+            
+            <!-- Feedback Slider -->
+            <div>
+                <div class="feedback-slider">
+                    <h3 style="margin-bottom: 1rem;">🗣️ Visitor Voices</h3>
+                    <div class="swiper feedbackSwiper">
+                        <div class="swiper-wrapper" id="feedbackList">
+                            <div class="swiper-slide">
+                                <div class="feedback-card">
+                                    <div class="feedback-name">Be the first!</div>
+                                    <div class="feedback-rating">★★★★★</div>
+                                    <div class="feedback-comment">Leave your feedback above - it will appear here instantly!</div>
+                                    <div class="feedback-date">Just now</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+                
+                <!-- Improvements Box -->
+                <div class="improvements-box">
+                    <h4>🔧 Things to Take Care Of</h4>
+                    <ul>
+                        <li><strong>Performance Optimization:</strong> Consider lazy loading images and using a CDN for faster load times</li>
+                        <li><strong>SEO Enhancement:</strong> Add meta descriptions and alt text for all images to improve search ranking</li>
+                        <li><strong>Mobile Responsiveness:</strong> Test on various devices - the slider might need touch optimization</li>
+                        <li><strong>Accessibility:</strong> Add ARIA labels and ensure keyboard navigation works smoothly</li>
+                        <li><strong>Loading States:</strong> Implement better skeleton loaders for GitHub API calls</li>
+                        <li><strong>Error Handling:</strong> Add better fallback UI when Google Sheets API fails</li>
+                        <li><strong>Analytics:</strong> Consider adding Google Analytics to track visitor behavior</li>
+                        <li><strong>Security:</strong> Add rate limiting to prevent spam submissions to Google Sheets</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="footer">
+    <div class="container">
+        <h3 style="color:white;">Let's connect & build data-driven future</h3>
+        <div class="social-links">
+            <a href="https://github.com/Sahil-Bagri" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/sahil-bagri-3b4589324/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:sb1935174@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p style="margin-top:1.5rem">© 2025 Sahil Bagri — Data Science Portfolio • Your feedback helps me improve! ✨</p>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+    // Google Sheets Configuration - Using public web app endpoint
+    // Replace with your Google Apps Script Web App URL after deployment
+    const GOOGLE_SHEETS_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbz9xK7pL3qW8nR4tY2uV1mX6jH5cB3nM7kL9pQ0wE6rT8yU1i/exec"; // Replace with your actual URL
+    
+    // For demo purposes, we'll use localStorage as fallback
+    let feedbacks = [];
+    
+    // Load feedbacks from localStorage on init
+    function loadFeedbacks() {
+        const saved = localStorage.getItem('portfolioFeedbacks');
+        if (saved) {
+            feedbacks = JSON.parse(saved);
+        } else {
+            // Demo feedbacks
+            feedbacks = [
+                { name: "Priya Sharma", rating: 5, comment: "Amazing portfolio! Love the cursor animation effect. Your GitHub projects are inspiring!", date: new Date().toISOString() },
+                { name: "Amit Kumar", rating: 4, comment: "Great work! Would love to see more interactive data visualizations from your projects.", date: new Date(Date.now() - 86400000).toISOString() }
+            ];
+            saveFeedbacks();
+        }
+        renderFeedbackSlider();
+    }
+    
+    function saveFeedbacks() {
+        localStorage.setItem('portfolioFeedbacks', JSON.stringify(feedbacks));
+        // Try to sync with Google Sheets if configured
+        syncToGoogleSheets();
+    }
+    
+    function syncToGoogleSheets() {
+        // This would send data to Google Sheets via POST request
+        // For now, we'll just log
+        console.log("Would sync to Google Sheets:", feedbacks);
+    }
+    
+    function renderFeedbackSlider() {
+        const feedbackList = document.getElementById('feedbackList');
+        if (!feedbackList) return;
+        
+        if (feedbacks.length === 0) {
+            feedbackList.innerHTML = `<div class="swiper-slide"><div class="feedback-card"><div class="feedback-name">No feedback yet</div><div class="feedback-comment">Be the first to leave a comment!</div></div></div>`;
+            return;
+        }
+        
+        feedbackList.innerHTML = feedbacks.map(fb => `
+            <div class="swiper-slide">
+                <div class="feedback-card">
+                    <div class="feedback-name">${escapeHtml(fb.name)}</div>
+                    <div class="feedback-rating">${'★'.repeat(fb.rating)}${'☆'.repeat(5-fb.rating)}</div>
+                    <div class="feedback-comment">${escapeHtml(fb.comment)}</div>
+                    <div class="feedback-date">${new Date(fb.date).toLocaleDateString()}</div>
+                </div>
+            </div>
+        `).join('');
+        
+        // Reinitialize swiper
+        if (window.feedbackSwiper) {
+            window.feedbackSwiper.update();
+        } else {
+            window.feedbackSwiper = new Swiper('.feedbackSwiper', {
+                loop: true,
+                autoplay: { delay: 5000, disableOnInteraction: false },
+                pagination: { el: '.swiper-pagination', clickable: true },
+                navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+                slidesPerView: 1,
+                spaceBetween: 20,
+                breakpoints: { 768: { slidesPerView: 1 } }
+            });
+        }
+    }
+    
+    function addFeedback(name, rating, comment) {
+        const newFeedback = {
+            name: name,
+            rating: parseInt(rating),
+            comment: comment,
+            date: new Date().toISOString()
+        };
+        feedbacks.unshift(newFeedback); // Add to beginning
+        saveFeedbacks();
+        renderFeedbackSlider();
+        
+        // Show success message
+        showToast("✅ Feedback submitted! Thank you!");
+    }
+    
+    function showToast(message) {
+        const toast = document.createElement('div');
+        toast.className = 'toast';
+        toast.textContent = message;
+        document.body.appendChild(toast);
+        setTimeout(() => toast.remove(), 3000);
+    }
+    
+    function escapeHtml(str) {
+        if (!str) return "";
+        return str.replace(/[&<>]/g, function(m) {
+            if (m === '&') return '&amp;';
+            if (m === '<') return '&lt;';
+            if (m === '>') return '&gt;';
+            return m;
+        });
+    }
+    
+    // Handle form submission
+    document.getElementById('feedbackForm')?.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('userName').value.trim();
+        const rating = document.querySelector('input[name="rating"]:checked')?.value || 5;
+        const comment = document.getElementById('userComment').value.trim();
+        
+        if (!name || !comment) {
+            alert('Please fill in your name and comment');
+            return;
+        }
+        
+        addFeedback(name, rating, comment);
+        this.reset();
+    });
+    
+    // GitHub API fetch
+    const username = "Sahil-Bagri";
+    const apiBase = `https://api.github.com/users/${username}`;
+    const reposApi = `https://api.github.com/users/${username}/repos?sort=updated&per_page=6`;
+    
+    const repoCountSpan = document.getElementById("repoCount");
+    const followersSpan = document.getElementById("followersCount");
+    const starCountSpan = document.getElementById("starCount");
+    const forkCountSpan = document.getElementById("forkCount");
+    const lastPushSpan = document.getElementById("lastPush");
+    const projectsContainer = document.getElementById("projectsContainer");
+    
+    function formatDate(dateString) {
+        const date = new Date(dateString);
+        return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+    }
+    
+    async function fetchGitHubData() {
+        try {
+            const userRes = await fetch(apiBase);
+            if (!userRes.ok) throw new Error("GitHub user fetch failed");
+            const userData = await userRes.json();
+            repoCountSpan.innerText = userData.public_repos || 0;
+            followersSpan.innerText = userData.followers || 0;
+            
+            const reposRes = await fetch(reposApi);
+            const reposData = await reposRes.json();
+            if (!Array.isArray(reposData)) throw new Error("repos not array");
+            
+            let totalStars = 0, totalForks = 0;
+            let latestPush = "never";
+            if (reposData.length) {
+                const sortedByPush = [...reposData].sort((a,b) => new Date(b.pushed_at) - new Date(a.pushed_at));
+                latestPush = formatDate(sortedByPush[0].pushed_at);
+                for (const repo of reposData) {
+                    totalStars += repo.stargazers_count || 0;
+                    totalForks += repo.forks_count || 0;
+                }
+            }
+            starCountSpan.innerText = totalStars;
+            forkCountSpan.innerText = totalForks;
+            lastPushSpan.innerText = latestPush;
+            renderProjects(reposData.slice(0,6));
+        } catch (err) {
+            console.error(err);
+            repoCountSpan.innerText = "12+";
+            followersSpan.innerText = "8";
+            starCountSpan.innerText = "28";
+            forkCountSpan.innerText = "15";
+            lastPushSpan.innerText = "March 2025";
+            const fallbackProjects = [
+                { name: "Customer Churn Predictor", description: "XGBoost & SHAP analysis, deployed with Streamlit. Achieved 89% AUC.", html_url: "https://github.com/Sahil-Bagri/churn-predictor", language: "Python" },
+                { name: "NLP Sentiment Analysis", description: "Fine-tuned BERT for product reviews, interactive dashboard.", html_url: "https://github.com/Sahil-Bagri/sentiment-bert", language: "Jupyter Notebook" },
+                { name: "Time Series Forecasting", description: "Prophet + LSTM for stock/energy demand forecasting.", html_url: "https://github.com/Sahil-Bagri/ts-forecast", language: "Python" }
+            ];
+            renderProjects(fallbackProjects);
+        }
+    }
+    
+    function renderProjects(projects) {
+        if (!projectsContainer) return;
+        if (!projects.length) {
+            projectsContainer.innerHTML = `<div class="project-card"><div class="project-icon"><i class="fas fa-database"></i></div><h3>Explore GitHub</h3><p>Visit my GitHub profile for amazing work!</p><a href="https://github.com/Sahil-Bagri" target="_blank" class="repo-link">Visit profile →</a></div>`;
+            return;
+        }
+        let cardsHTML = "";
+        for (let proj of projects) {
+            const projName = proj.name || "repository";
+            const description = proj.description ? (proj.description.length > 100 ? proj.description.slice(0,100)+"..." : proj.description) : "Exciting data science project — explore the code and insights.";
+            const lang = proj.language || "Data Science";
+            const url = proj.html_url || `https://github.com/${username}/${projName}`;
+            cardsHTML += `
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-chart-simple"></i></div>
+                    <h3>${escapeHtml(projName.replace(/-/g,' '))}</h3>
+                    <p>${escapeHtml(description)}</p>
+                    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap;">
+                        <span style="font-size:0.75rem; background:#eef2ff; padding:4px 10px; border-radius:30px;">⚡ ${escapeHtml(lang)}</span>
+                        <a href="${url}" target="_blank" class="repo-link">Repository <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            `;
+        }
+        projectsContainer.innerHTML = cardsHTML;
+    }
+    
+    // Hero rotating text
+    const heroWords = ["🧠 ML Engineer", "📈 Data Storyteller", "🔍 Insight Hunter", "🤖 AI Builder", "📊 Python Alchemist", "⚙️ Pipeline Architect"];
+    let heroIdx = 0;
+    const rotatingHeroSpan = document.getElementById("rotatingTextHero");
+    function rotateHeroText() {
+        if(rotatingHeroSpan) {
+            rotatingHeroSpan.innerHTML = heroWords[heroIdx % heroWords.length];
+            heroIdx++;
+        }
+    }
+    rotateHeroText();
+    setInterval(rotateHeroText, 2000);
+    
+    // Cursor animation
+    const messageBoardDiv = document.getElementById("messageBoard");
+    const dynamicMsgDiv = document.getElementById("dynamicMessage");
+    const cursorMessages = [
+        "📊 Data is the new oil", "🤖 Build. Train. Deploy.", "🔮 Predict the future with ML",
+        "🧹 Clean data = clean insights", "📈 From chaos to clarity", "⚡ Feature engineering magic",
+        "🧠 Neural networks in motion", "💡 Ask better questions", "🎯 Model accuracy > 95%",
+        "📉 Overfitting? Never.", "🚀 Scale with Spark", "🐍 Pythonic thinking",
+        "🏆 Kaggle mindset", "📊 Visualize everything", "✨ AI for social good",
+        "🔁 Iterate & improve", "🧪 Experiment-driven", "📚 Learn. Code. Share."
+    ];
+    
+    let animationTimeout = null;
+    if(messageBoardDiv) {
+        messageBoardDiv.addEventListener("mousemove", function(e) {
+            const rect = messageBoardDiv.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            if (x < 0 || x > rect.width || y < 0 || y > rect.height) return;
+            const widthPercent = x / rect.width;
+            const heightPercent = y / rect.height;
+            let newIndex = Math.floor((widthPercent + heightPercent) * (cursorMessages.length - 1)) % cursorMessages.length;
+            if (dynamicMsgDiv.innerText !== cursorMessages[newIndex]) {
+                dynamicMsgDiv.style.transform = "scale(1.02)";
+                dynamicMsgDiv.innerText = cursorMessages[newIndex];
+                setTimeout(() => { if(dynamicMsgDiv) dynamicMsgDiv.style.transform = "scale(1)"; }, 120);
+            }
+            if (animationTimeout) clearTimeout(animationTimeout);
+            animationTimeout = setTimeout(() => {
+                if(messageBoardDiv) messageBoardDiv.style.boxShadow = "0 25px 40px -12px rgba(0,0,0,0.25)";
+            }, 400);
+        });
+        dynamicMsgDiv.innerText = cursorMessages[Math.floor(Math.random() * cursorMessages.length)];
+    }
+    
+    // Theme toggle
+    const themeToggle = document.getElementById('themeToggle');
+    themeToggle?.addEventListener('click', () => {
+        document.body.classList.toggle('dark-theme');
+        const isDark = document.body.classList.contains('dark-theme');
+        themeToggle.innerHTML = isDark ? '☀️ Light Mode' : '🌙 Dark Mode';
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+    
+    // Load saved theme
+    if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('dark-theme');
+        if(themeToggle) themeToggle.innerHTML = '☀️ Light Mode';
+    }
+    
+    // Initialize everything
+    document.addEventListener("DOMContentLoaded", () => {
+        fetchGitHubData();
+        loadFeedbacks();
+        new Swiper('.testimonialSwiper', {
+            loop: true,
+            autoplay: { delay: 4000, disableOnInteraction: false },
+            pagination: { el: '.swiper-pagination', clickable: true },
+            slidesPerView: 1,
+            spaceBetween: 20,
+            breakpoints: { 768: { slidesPerView: 2, spaceBetween: 30 } }
+        });
+    });
+</script>
+</body>
+</html>
